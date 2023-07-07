@@ -67,7 +67,7 @@ const token = localStorage.getItem("access_token")
 const axiosInstance = async (method, url, data) => {
     return await axios({
         baseURL: process.env.REACT_APP_AXIOS_BASE_URL,
-        timeout: 10000,
+        timeout: 0,
         headers: {
             Authorization: token,
         },
