@@ -291,7 +291,7 @@ export const requestLogin = (dispatch, values) => {
         }
 
         dispatch(endLogin())
-    }, 2000)
+    })
 }
 
 export const requestRegister = (dispatch, values) => {
