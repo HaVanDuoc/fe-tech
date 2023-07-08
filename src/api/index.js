@@ -83,7 +83,7 @@ export default axiosInstance
 export const requestUpdateAvatar = (dispatch, { userId, avatar }) => {
     dispatch(setPendingUpdateAvatar(true))
     setTimeout(async () => {
-        const response = await axiosInstance("put", "/user/updateAvatar", { userId, avatar })
+        const response = await axiosInstance("put", "/user/client/updateAvatar", { userId, avatar })
         dispatch(setResponse(response))
         dispatch(exportResponse())
         dispatch(setPendingUpdateAvatar(false))
@@ -93,7 +93,7 @@ export const requestUpdateAvatar = (dispatch, { userId, avatar }) => {
 export const requestUpdateInfoUser = (dispatch, { data }) => {
     setTimeout(async () => {
         dispatch(isPendingUpdateInfoUser())
-        const response = await axiosInstance("put", `/user/updateUser/${data.userId}`, data)
+        const response = await axiosInstance("put", `/user/client/updateUser/${data.userId}`, data)
         dispatch(setResponse(response))
         dispatch(exportResponse())
     }, 2000)
