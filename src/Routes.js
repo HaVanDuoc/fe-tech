@@ -48,7 +48,7 @@ export const privateRoutes = [
     { path: "/admin/orders/createOrder/:user_id", page: CreateOrder, layout: AdminLayout }, // create order
 
     // Home routes
-    { path: "/admintech", page: HomeAdmin, layout: AdminLayout }, // Home
+    { path: "/admin", page: HomeAdmin, layout: AdminLayout }, // Home
 
     // User routes
     { path: "/admin/users", page: UserListAdmin, layout: AdminLayout }, // User
