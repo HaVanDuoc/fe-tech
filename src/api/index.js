@@ -202,7 +202,7 @@ export const requestSuggestToday = (dispatch, { limit }) => {
         const response = await axiosInstance("post", "/product/getProducts", { limit })
         dispatch(setSuggestToday(response.data.data))
         dispatch(setPendingSuggestToday(false))
-    }, 1000)
+    })
 }
 
 export const requestSearchProduct = async (dispatch, key, limit) => {
@@ -291,7 +291,7 @@ export const requestLogin = (dispatch, values) => {
         }
 
         dispatch(endLogin())
-    })
+    }, 1000)
 }
 
 export const requestRegister = (dispatch, values) => {
